@@ -29,10 +29,10 @@
 				<!-- Nav -->
 				<nav id="nav">
 					<ul>
-						<li><a href="index.html">Homepage</a></li>
-						<li><a href="left-sidebar.html">Left Sidebar</a></li>
-						<li class="active"><a href="right-sidebar.html">Right Sidebar</a></li>
-						<li><a href="no-sidebar.html">No Sidebar</a></li>
+						<li><a href="index.php">Home</a></li>
+						<li><a href="Apply Candidature.php">Apply Candidature</a></li>
+						<li class="active"><a href="Election.php">Elections</a></li>
+						<li><a href="Results.php">Results</a></li>
 					</ul>
 				</nav>
 			</div>
