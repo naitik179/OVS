@@ -5,8 +5,9 @@
     Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
 <html>
+
 <head>
-	<title>Linear by TEMPLATED</title>
+	<title>OVS ' Online Voting</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -21,11 +22,12 @@
 		<link rel="stylesheet" href="css/style-desktop.css" />
 	</noscript>
 </head>
+
 <body class="homepage">
 
 	<!-- Header -->
 	<div id="header">
-		<div id="nav-wrapper"> 
+		<div id="nav-wrapper">
 			<!-- Nav -->
 			<nav id="nav">
 				<ul>
@@ -36,12 +38,12 @@
 				</ul>
 			</nav>
 		</div>
-		<div class="container"> 
+		<div class="container">
 
 			<!-- Logo -->
 			<div id="logo">
-				<h1><a href="#">Linear</a></h1>
-				<span class="tag">By TEMPLATED</span>
+				<h1><a href="#">Online Voting System</a></h1>
+				<span class="tag">By team OVS</span>
 			</div>
 		</div>
 	</div>
@@ -50,28 +52,29 @@
 	<div id="featured">
 		<div class="container">
 			<header>
-				<h2>Welcome to Linear</h2>
+				<h2>Welcome</h2>
 			</header>
-			<p>This is <strong>Linear</strong>, a responsive HTML5 site template freebie by <a href="http://templated.co">TEMPLATED</a>. Released for free under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so use it for whatever (personal or commercial) &ndash; just give us credit! Check out more of our stuff at <a href="http://templated.co">our site</a> or follow us on <a href="http://twitter.com/templatedco">Twitter</a>.</p>
+			<p>This is <strong>Online </strong> Election Handling System.This voting System can be used for casting votes during the Elections held in Colleges, Departments, Councils, Organization etc. In this system the voter do not have to go to the polling booth to cast their vote. </p>
 			<hr />
+			<p style="font-family: sans-serif;text-align: center;color: black;font-size: 3.2em;"> Ongoing Elections </p>
 			<div class="row">
 				<section class="4u">
 					<span class="pennant"><span class="fa fa-briefcase"></span></span>
-					<h3>Maecenas luctus lectus</h3>
-					<p>Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat vel, suscipit in, mattis placerat, nulla. Sed ac leo.</p>
-					<a href="#" class="button button-style1">Read More</a>
+					<h3>Election for Class Representative</h3>
+					<p>Elections for Class Representative for Class IT - B . Scheduled on Sunday date 22nd of November, 2019</p>
+					<a href="#" class="button button-style1">Vote</a>
 				</section>
 				<section class="4u">
 					<span class="pennant"><span class="fa fa-lock"></span></span>
-					<h3>Maecenas luctus lectus</h3>
-					<p>Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec magna.</p>
-					<a href="#" class="button button-style1">Read More</a>
+					<h3>Elections for Council</h3>
+					<p>Elections for the Annual General Students Council Election for A.Y 2020</p>
+					<a href="#" class="button button-style1">Vote</a>
 				</section>
 				<section class="4u">
 					<span class="pennant"><span class="fa fa-globe"></span></span>
-					<h3>Maecenas luctus lectus</h3>
-					<p>Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat vel, suscipit in, mattis placerat, nulla. Sed ac leo.</p>
-					<a href="#" class="button button-style1">Read More</a>
+					<h3>Elections for Sports Head</h3>
+					<p>Elections for the Annual Sports Incharge for A.Y 2020</p>
+					<a href="#" class="button button-style1">Vote</a>
 				</section>
 
 			</div>
@@ -79,7 +82,7 @@
 	</div>
 
 	<!-- Main -->
-	<div id="main">
+	<!-- <div id="main">
 		<div id="content" class="container">
 
 			<div class="row">
@@ -89,14 +92,14 @@
 						<h2>Mauris vulputate dolor</h2>
 					</header>
 					<p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat. Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</p>
-				</section>				
+				</section>
 				<section class="6u">
 					<a href="#" class="image full"><img src="images/pic02.jpg" alt=""></a>
 					<header>
 						<h2>Mauris vulputate dolor</h2>
 					</header>
 					<p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat. Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</p>
-				</section>				
+				</section>
 			</div>
 
 			<div class="row">
@@ -106,24 +109,24 @@
 						<h2>Mauris vulputate dolor</h2>
 					</header>
 					<p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat. Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</p>
-				</section>				
+				</section>
 				<section class="6u">
 					<a href="#" class="image full"><img src="images/pic04.jpg" alt=""></a>
 					<header>
 						<h2>Mauris vulputate dolor</h2>
 					</header>
 					<p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat. Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</p>
-				</section>				
+				</section>
 			</div>
-			
+
 		</div>
-	</div>
+	</div> -->
 
 	<!-- Tweet -->
 	<div id="tweet">
 		<div class="container">
 			<section>
-				<blockquote>&ldquo;In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat.&rdquo;</blockquote>
+				<blockquote>&ldquo;Voting is the expression of our commitment to ourselves, one another, this country and this world.&rdquo;</blockquote>
 			</section>
 		</div>
 	</div>
@@ -134,7 +137,7 @@
 			<section>
 				<header>
 					<h2>Get in touch</h2>
-					<span class="byline">Integer sit amet pede vel arcu aliquet pretium</span>
+					<span class="byline">Contact US</span>
 				</header>
 				<ul class="contact">
 					<li><a href="#" class="fa fa-twitter"><span>Twitter</span></a></li>
@@ -149,9 +152,10 @@
 	<!-- Copyright -->
 	<div id="copyright">
 		<div class="container">
-			Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
+		Made By Team OVS
 		</div>
 	</div>
 
 </body>
+
 </html>

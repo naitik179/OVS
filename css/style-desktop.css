@@ -24,6 +24,8 @@
 		header h2
 		{
 			font-size: 3.4em;
+    		color: black;
+    		font-family: sans-serif
 		}
 
 		header .byline
@@ -71,7 +73,7 @@
 	
 	#footer
 	{
-		padding: 6em 0em;
+		padding: 3em 0em;
 	}
 	
 /*********************************************************************************/
@@ -97,7 +99,7 @@
 	#featured p
 	{
 		line-height: 2em;
-		font-size: 1.2em;
+		font-size: 1.5em;
 	}
 	
 /*********************************************************************************/
