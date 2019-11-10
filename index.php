@@ -1,3 +1,19 @@
+<?php
+    session_start();
+
+    if (!isset($_SESSION['userid'])) {
+        echo "Please Login again";
+        echo "<a href='http://localhost:8000/OVS/Login.php'>Click Here to Login</a>";
+    }
+    else {
+        $now = time(); // Checking the time now when home page starts.
+
+        if ($now > $_SESSION['expire']) {
+            session_destroy();
+            echo "Your session has expired! <a href='http://localhost:8000/OVS/Login.php'>Login here</a>";
+        }
+        else { //Starting this else one [else1]
+?>
 <!DOCTYPE HTML>
 <html>
 
@@ -28,7 +44,6 @@
 				<ul>
 					<li class="active"><a href="index.php">Home</a></li>
 					<li><a href="Apply Candidature.php">Apply Candidature</a></li>
-					<li><a href="Election.php">Elections</a></li>
 					<li><a href="Results.php">Results</a></li>
 				</ul>
 			</nav>
@@ -154,3 +169,8 @@
 </body>
 
 </html>
+
+<?php
+        }
+    }
+?>
