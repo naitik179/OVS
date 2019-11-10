@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Linear by TEMPLATED</title>
+		<title>OVS Online Voting</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -31,14 +31,6 @@
 					</ul>
 				</nav>
 			</div>
-			<div class="container"> 
-				
-				<!-- Logo -->
-				<div id="logo">
-					<h1><a href="#">Linear</a></h1>
-					<span class="tag">By TEMPLATED</span>
-				</div>
-			</div>
 		</div>
 	<!-- Header --> 
 
@@ -59,15 +51,13 @@
 		</div>
 	<!-- /Main -->
 
-	<!-- Tweet -->
-		<div id="tweet">
-			<div class="container">
-				<section>
-					<blockquote>&ldquo;In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat.&rdquo;</blockquote>
-				</section>
-			</div>
+	<div id="tweet">
+		<div class="container">
+			<section>
+				<blockquote>&ldquo;Voting is the expression of our commitment to ourselves, one another, this country and this world.&rdquo;</blockquote>
+			</section>
 		</div>
-	<!-- /Tweet -->
+	</div>
 
 	<!-- Footer -->
 	<div id="footer">
@@ -86,14 +76,13 @@
 			</section>
 		</div>
 	</div>
-	<!-- /Footer -->
 
 	<!-- Copyright -->
-		<div id="copyright">
-			<div class="container">
-				Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
-			</div>
+	<div id="copyright">
+		<div class="container">
+		Made By Team OVS
 		</div>
+	</div>
 
 
 	</body>

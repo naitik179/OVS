@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>OVS ' Online Voting</title>
+		<title>OVS Online Voting</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -43,31 +43,31 @@
 					<div id="sidebar" class="4u">
 						<section>
 							<header>
-								<h2>Etiam malesuada</h2>
+								<h2>Coming Soon</h2>
 							</header>
 							<div class="row">
 								<section class="6u">
 									<ul class="default">
-										<li><a href="#">Donec facilisis tempor</a></li>
+										<!-- <li><a href="#">Donec facilisis tempor</a></li>
 										<li><a href="#">Nulla convallis cursus</a></li>
 										<li><a href="#">Integer congue euismod</a></li>
 										<li><a href="#">Venenatis vulputate</a></li>
-										<li><a href="#">Morbi ligula volutpat</a></li>
+										<li><a href="#">Morbi ligula volutpat</a></li> -->
 									</ul>
 								</section>
 								<section class="6u">
 									<ul class="default">
-										<li><a href="#">Donec facilisis tempor</a></li>
+										<!-- <li><a href="#">Donec facilisis tempor</a></li>
 										<li><a href="#">Nulla convallis cursus</a></li>
 										<li><a href="#">Integer congue euismod</a></li>
 										<li><a href="#">Venenatis vulputate</a></li>
-										<li><a href="#">Morbi ligula volutpat</a></li>
+										<li><a href="#">Morbi ligula volutpat</a></li> -->
 									</ul>
 								</section>
 							</div>
 						</section>
 						<section>
-							<header>
+							<!-- <header>
 								<h2>Mauris vulputate</h2>
 							</header>
 							<ul class="style">
@@ -79,7 +79,7 @@
 									<p class="posted">May 18, 2014  |  (10 )  Comments</p>
 									<p><a href="#">Nullam non wisi a sem eleifend. Donec mattis libero eget urna. Pellentesque viverra enim.</a></p>
 								</li>
-							</ul>
+							</ul> -->
 						</section>
 					</div>
 					
@@ -87,13 +87,13 @@
 					<div id="content" class="8u skel-cell-important">
 						<section>
 							<header>
-								<h2>Left Sidebar</h2>
-								<span class="byline">Integer sit amet pede vel arcu aliquet pretium</span>
+								<h2>Applications will start soon</h2>
+								<span class="byline"></span>
 							</header>
-							<p>Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor enim accumsan lacinia. Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet eros quam eget ante. Aliquam libero. Vivamus nisl nibh, iaculis vitae, viverra sit amet, ullamcorper vitae, turpis. Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna quis risus. Quisque eleifend. Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit.</p>
+							<!-- <p>Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor enim accumsan lacinia. Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet eros quam eget ante. Aliquam libero. Vivamus nisl nibh, iaculis vitae, viverra sit amet, ullamcorper vitae, turpis. Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna quis risus. Quisque eleifend. Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit.</p>
 							<p>Donec nonummy magna quis risus. Quisque eleifend. Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor enim accumsan lacinia. Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet eros quam eget ante. Aliquam libero. Vivamus nisl nibh, iaculis vitae, viverra sit amet, ullamcorper vitae, turpis. Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit.</p>
 							<p>Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor enim accumsan lacinia. Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet eros quam eget ante. Aliquam libero. Vivamus nisl nibh, iaculis vitae, viverra sit amet, ullamcorper vitae, turpis. Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna quis risus. Quisque eleifend. Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit.</p>
-							<p>Donec nonummy magna quis risus. Quisque eleifend. Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor enim accumsan lacinia. Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet eros quam eget ante. Aliquam libero. Vivamus nisl nibh, iaculis vitae, viverra sit amet, ullamcorper vitae, turpis. Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit.</p>
+							<p>Donec nonummy magna quis risus. Quisque eleifend. Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor enim accumsan lacinia. Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet eros quam eget ante. Aliquam libero. Vivamus nisl nibh, iaculis vitae, viverra sit amet, ullamcorper vitae, turpis. Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit.</p> -->
 						</section>
 					</div>
 
@@ -102,15 +102,13 @@
 		</div>
 	<!-- /Main -->
 
-	<!-- Tweet -->
-		<div id="tweet">
-			<div class="container">
-				<section>
-					<blockquote>&ldquo;In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat.&rdquo;</blockquote>
-				</section>
-			</div>
+	<div id="tweet">
+		<div class="container">
+			<section>
+				<blockquote>&ldquo;Voting is the expression of our commitment to ourselves, one another, this country and this world.&rdquo;</blockquote>
+			</section>
 		</div>
-	<!-- /Tweet -->
+	</div>
 
 	<!-- Footer -->
 	<div id="footer">
@@ -129,14 +127,13 @@
 			</section>
 		</div>
 	</div>
-	<!-- /Footer -->
 
 	<!-- Copyright -->
-		<div id="copyright">
-			<div class="container">
-				Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
-			</div>
+	<div id="copyright">
+		<div class="container">
+		Made By Team OVS
 		</div>
+	</div>
 
 
 	</body>
