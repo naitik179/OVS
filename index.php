@@ -2,7 +2,7 @@
     session_start();
 
     if (!isset($_SESSION['userid'])) {
-        header('Location: http://localhost:8000/OVS/Login.php');  
+        header('Location: http://localhost/OVS/Login.php');  
 					    	    
     }
     else {
@@ -10,7 +10,7 @@
 
         if ($now > $_SESSION['expire']) {
             session_destroy();
-        header('Location: http://localhost:8000/OVS/Login.php');  
+		header('Location: http://localhost/OVS/Login.php');  
         }
         else { //Starting this else one [else1]
 ?>
