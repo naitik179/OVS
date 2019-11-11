@@ -10,7 +10,7 @@
 
         if ($now > $_SESSION['expire']) {
             session_destroy();
-		header('Location: http://localhost/OVS/Login.php');  
+        header('Location: http://localhost/OVS/Login.php');  
         }
         else { //Starting this else one [else1]
 ?>
@@ -68,72 +68,42 @@
 			<p>This is <strong>Online </strong> Election Handling System.This voting System can be used for casting votes during the Elections held in Colleges, Departments, Councils, Organization etc. In this system the voter do not have to go to the polling booth to cast their vote. </p>
 			<hr />
 			<p style="font-family: sans-serif;text-align: center;color: black;font-size: 3.2em;"> Ongoing Elections </p>
-			<div class="row">
-				<section class="4u">
-					<span class="pennant"><span class="fa fa-briefcase"></span></span>
-					<h3>Election for Class Representative</h3>
-					<p>Elections for Class Representative for Class IT - B . Scheduled on Sunday date 22nd of November, 2019</p>
-					<a href="#" class="button button-style1">Vote</a>
-				</section>
-				<section class="4u">
-					<span class="pennant"><span class="fa fa-lock"></span></span>
-					<h3>Elections for Council</h3>
-					<p>Elections for the Annual General Students Council Election for A.Y 2020</p>
-					<a href="#" class="button button-style1">Vote</a>
-				</section>
-				<section class="4u">
-					<span class="pennant"><span class="fa fa-globe"></span></span>
-					<h3>Elections for Sports Head</h3>
-					<p>Elections for the Annual Sports Incharge for A.Y 2020</p>
-					<a href="#" class="button button-style1">Vote</a>
-				</section>
 
-			</div>
-		</div>
-	</div>
 
-	<!-- Main -->
-	<!-- <div id="main">
-		<div id="content" class="container">
+<div class="row">
+			<?php
+					$localhost = "localhost";
+  					$username = "root";
+ 					 $password = "password";
+ 					 $db = "online_voting";
+  
 
-			<div class="row">
-				<section class="6u">
-					<a href="#" class="image full"><img src="images/pic01.jpg" alt=""></a>
-					<header>
-						<h2>Mauris vulputate dolor</h2>
-					</header>
-					<p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat. Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</p>
-				</section>
-				<section class="6u">
-					<a href="#" class="image full"><img src="images/pic02.jpg" alt=""></a>
-					<header>
-						<h2>Mauris vulputate dolor</h2>
-					</header>
-					<p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat. Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</p>
-				</section>
-			</div>
+ 					 $conn = mysqli_connect($localhost,$username,$password,$db);
+ 					 if(!$conn)
+  						echo "Connection error : " .mysqli_connect_error();
+					   
+  							$type= settype($_SESSION['type'],'integer');
+					    	$retrieving_data = "select * from election where election_type=".$type;
+					    	$result = $conn->query($retrieving_data);
 
-			<div class="row">
-				<section class="6u">
-					<a href="#" class="image full"><img src="images/pic03.jpg" alt=""></a>
-					<header>
-						<h2>Mauris vulputate dolor</h2>
-					</header>
-					<p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat. Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</p>
-				</section>
-				<section class="6u">
-					<a href="#" class="image full"><img src="images/pic04.jpg" alt=""></a>
-					<header>
-						<h2>Mauris vulputate dolor</h2>
-					</header>
-					<p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat. Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</p>
-				</section>
-			</div>
+					    	if ($result->num_rows > 0) {
+					    	    while($row = $result->fetch_assoc()) {
+					    	      ?>
+					    	      <section class="4u">
+									<span class="pennant"><span class="fa fa-briefcase"></span></span>
+									<h3><?= $row['post'] ?></h3>
+									<a href="#" class="button button-style1">Vote</a>
+								</section>
+					    	    <?php 
+					    			}
+					    		}
+					    		 ?>
+</div>
 
-		</div>
-	</div> -->
+><br><br>
 
-	<!-- Tweet -->
+			
+
 	<div id="tweet">
 		<div class="container">
 			<section>
@@ -158,7 +128,7 @@
 				</ul>
 			</section>
 		</div>
-	</div>
+	</div><br><br>
 
 	<!-- Copyright -->
 	<div id="copyright">
@@ -168,10 +138,7 @@
 	</div>
 
 </body>
-
+<?php 
+}
+} ?>
 </html>
-
-<?php
-        }
-    }
-?>
