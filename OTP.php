@@ -63,11 +63,9 @@ session_start();
 								<!-- <span class="byline">Integer sit amet pede vel arcu aliquet pretium</span> -->
 							</header>
 
-							<form name="form1" method="post">
-								User id <br><br>
-								<input type="text" name="uid"><br><br>
-								Password<br><br>
-								<input type="password" name="pass"><br><br>
+							<form name="otpform" method="post">
+								OTP <br><br>
+								<input type="text" name="otp"><br><br>
 								<input type="submit" name="submit"><br><br>
 							</form>
 						</section>
@@ -76,25 +74,18 @@ session_start();
 
 					<?php
 					    if (isset($_POST['submit'])) {
-					    	$uid = $_POST['uid'];
-					    	$pass = $_POST['pass'];
+					    	$otp = $_POST['otp'];
+					    	$session_otp=$_SESSION['OTP'];
 
-					    	$retrieving_data = "select username,email_id from user where username='".$uid."' AND password='".$pass."'";
-					    	$result = $conn->query($retrieving_data);
-
-					    	if ($result->num_rows > 0 && $result->num_rows < 2) {
-					    	    while($row = $result->fetch_assoc()) {
-					    	    $_SESSION['userid'] = $uid;
-					    	    $_SESSION['email_id'] = $row['email_id'];
-					            // $_SESSION['start'] = time(); // Taking now logged in time.
+					    	if ($session_otp == $otp) {
+					            $_SESSION['start'] = time(); // Taking now logged in time.
 					            // Ending a session in 30 minutes from the starting time.
-					            // $_SESSION['expire'] = $_SESSION['start'] + (5 * 60);
-					            header('Location: http://localhost:8000/OVS/voting/phpmailer/mailer.php');  
-					    	    }
+					            $_SESSION['expire'] = $_SESSION['start'] + (5 * 60);
+					            header('Location: http://localhost:8000/OVS/index.php');  
 
 					    	} else { ?>
 
-					    	    <p class="error">Please enter a valid username or password</p>
+					    	    <p class="error">Incorrect OTP</p>
 
 					    	<?php
 					    	}
@@ -102,50 +93,6 @@ session_start();
 					    }
 					?>
 
-					<!-- Sidebar -->
-					<!-- <div id="sidebar" class="4u">
-						<section>
-							<header>
-								<h2>Etiam malesuada</h2>
-							</header>
-							<div class="row">
-								<section class="6u">
-									<ul class="default">
-										<li><a href="#">Donec facilisis tempor</a></li>
-										<li><a href="#">Nulla convallis cursus</a></li>
-										<li><a href="#">Integer congue euismod</a></li>
-										<li><a href="#">Venenatis vulputate</a></li>
-										<li><a href="#">Morbi ligula volutpat</a></li>
-									</ul>
-								</section>
-								<section class="6u">
-									<ul class="default">
-										<li><a href="#">Donec facilisis tempor</a></li>
-										<li><a href="#">Nulla convallis cursus</a></li>
-										<li><a href="#">Integer congue euismod</a></li>
-										<li><a href="#">Venenatis vulputate</a></li>
-										<li><a href="#">Morbi ligula volutpat</a></li>
-									</ul>
-								</section>
-							</div>
-						</section>
-						<section>
-							<header>
-								<h2>Mauris vulputate</h2>
-							</header>
-							<ul class="style">
-								<li>
-									<p class="posted">May 21, 2014  |  (10 )  Comments</p>
-									<p><a href="#">Nullam non wisi a sem eleifend. Donec mattis libero eget urna. Pellentesque viverra enim.</a></p>
-								</li>
-								<li>
-									<p class="posted">May 18, 2014  |  (10 )  Comments</p>
-									<p><a href="#">Nullam non wisi a sem eleifend. Donec mattis libero eget urna. Pellentesque viverra enim.</a></p>
-								</li>
-							</ul>
-						</section>
-					</div>
-					 -->
 				</div>
 			</div>
 		</div>
