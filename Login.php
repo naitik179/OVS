@@ -80,9 +80,18 @@ if (!$conn)
 				if (isset($_POST['submit'])) {
 					$uid = $_POST['uid'];
 					$pass = $_POST['pass'];
+					    	$retrieving_data = "select username,email_id from user where username='".$uid."' AND password='".$pass."'";
+					    	$result = $conn->query($retrieving_data);
 
-					$retrieving_data = "select username from user where username='" . $uid . "' AND password='" . $pass . "'";
-					$result = $conn->query($retrieving_data);
+					    	if ($result->num_rows > 0 && $result->num_rows < 2) {
+					    	    while($row = $result->fetch_assoc()) {
+					    	    $_SESSION['userid'] = $uid;
+					    	    $_SESSION['email_id'] = $row['email_id'];
+					            // $_SESSION['start'] = time(); // Taking now logged in time.
+					            // Ending a session in 30 minutes from the starting time.
+					            // $_SESSION['expire'] = $_SESSION['start'] + (5 * 60);
+					            header('Location: http://localhost/OVS/voting/phpmailer/mailer.php');  
+					    	    }
 
 					if ($result->num_rows > 0 && $result->num_rows < 2) {
 						while ($row = $result->fetch_assoc()) {
