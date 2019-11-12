@@ -1,4 +1,7 @@
 <?php
+$vote_id=$_POST['vote_id'];
+?>
+<?php
     session_start();
 
     if (!isset($_SESSION['userid'])) {
@@ -62,15 +65,7 @@
 	<!-- Featured -->
 	<div id="featured">
 		<div class="container">
-			<header>
-				<h2>Welcome</h2>
-			</header>
-			<p>This is <strong>Online </strong> Election Handling System.This voting System can be used for casting votes during the Elections held in Colleges, Departments, Councils, Organization etc. In this system the voter do not have to go to the polling booth to cast their vote. </p>
-			<hr />
-			<p style="font-family: sans-serif;text-align: center;color: black;font-size: 3.2em;"> Ongoing Elections </p>
 
-
-<div class="row">
 			<?php
 					$localhost = "localhost";
   					$username = "root";
@@ -81,23 +76,17 @@
  					 $conn = mysqli_connect($localhost,$username,$password,$db);
  					 if(!$conn)
   						echo "Connection error : " .mysqli_connect_error();
-					   
-  							$type= settype($_SESSION['type'],'integer');
-					    	$retrieving_data = "select * from election where election_type=".$type;
-					    	$result = $conn->query($retrieving_data);
-
-					    	if ($result->num_rows > 0) {
-					    	    while($row = $result->fetch_assoc()) {
-					    	      ?>
-					    	      <section class="4u">
-									<span class="pennant"><span class="fa fa-briefcase"></span></span>
-									<h3><?= $row['post'] ?></h3>
-									<a href="Vote.php?id=<?= $row['election_id']?>" class="button button-style1">Vote</a>
-								</section>
-					    	    <?php 
-					    			}
-					    		}
-					    		 ?>
+  					$sql = "UPDATE candidate 
+  							SET vote_count=vote_count + 1 
+  							WHERE id=".$vote_id;
+					if ($conn->query($sql) === TRUE) {
+    					echo "Your Vote has been recorded. Thankyou!";
+					}
+					else {
+   						 echo "Error updating record: " . $conn->error;
+}
+			?>
+		</div>
 </div>
 
 <br><br>

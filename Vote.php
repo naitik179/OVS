@@ -32,6 +32,7 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/style-desktop.css" />
 	</noscript>
+	
 </head>
 
 <body class="homepage">
@@ -62,16 +63,13 @@
 	<!-- Featured -->
 	<div id="featured">
 		<div class="container">
-			<header>
-				<h2>Welcome</h2>
-			</header>
-			<p>This is <strong>Online </strong> Election Handling System.This voting System can be used for casting votes during the Elections held in Colleges, Departments, Councils, Organization etc. In this system the voter do not have to go to the polling booth to cast their vote. </p>
-			<hr />
-			<p style="font-family: sans-serif;text-align: center;color: black;font-size: 3.2em;"> Ongoing Elections </p>
+			
+<p style="font-family: sans-serif;text-align: center;color: black;font-size: 3.2em;"> Candidates </p>		
+<div class="row"> 
+	<form method="POST" action="Save.php">
+<?php 
+$election_id= htmlspecialchars($_GET["id"]);
 
-
-<div class="row">
-			<?php
 					$localhost = "localhost";
   					$username = "root";
  					 $password = "";
@@ -83,27 +81,28 @@
   						echo "Connection error : " .mysqli_connect_error();
 					   
   							$type= settype($_SESSION['type'],'integer');
-					    	$retrieving_data = "select * from election where election_type=".$type;
+					    	$retrieving_data = "SELECT user.name,candidate.dob,candidate.description,candidate.user_id,candidate.id
+												FROM user ,candidate
+												WHERE user.user_id = candidate.user_id 
+												AND candidate.election_id=".$election_id;
 					    	$result = $conn->query($retrieving_data);
 
 					    	if ($result->num_rows > 0) {
 					    	    while($row = $result->fetch_assoc()) {
 					    	      ?>
-					    	      <section class="4u">
-									<span class="pennant"><span class="fa fa-briefcase"></span></span>
-									<h3><?= $row['post'] ?></h3>
-									<a href="Vote.php?id=<?= $row['election_id']?>" class="button button-style1">Vote</a>
-								</section>
-					    	    <?php 
-					    			}
-					    		}
-					    		 ?>
+					    	      	<input type="radio" name="vote_id" value="<?= $row['id'] ?>"> <h3><?= $row['name'] ?></h3><br>
+					    	      	<p><?= $row['description'] ?></p><hr>									
+<?php 
+	}
+}
+?>
+<input type="submit" name="submit">
+</form>
+
 </div>
-
-<br><br>
-
-			
-
+</div>
+	</div>
+	<!-- Tweet -->
 	<div id="tweet">
 		<div class="container">
 			<section>
@@ -128,7 +127,7 @@
 				</ul>
 			</section>
 		</div>
-	</div><br><br>
+	</div>
 
 	<!-- Copyright -->
 	<div id="copyright">
@@ -138,7 +137,10 @@
 	</div>
 
 </body>
-<?php 
-}
-} ?>
+
 </html>
+
+<?php
+        }
+    }
+?>
