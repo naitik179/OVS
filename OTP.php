@@ -66,7 +66,7 @@ session_start();
 							<form name="otpform" method="post">
 								OTP <br><br>
 								<input type="text" name="otp"><br><br>
-								<input type="submit" name="submit"><br><br>
+								<input class="button button-style1" type="submit" name="submit"><br><br>
 							</form>
 						</section>
 					</div>
@@ -80,7 +80,7 @@ session_start();
 					    	if ($session_otp == $otp) {
 					            $_SESSION['start'] = time(); // Taking now logged in time.
 					            // Ending a session in 30 minutes from the starting time.
-					            $_SESSION['expire'] = $_SESSION['start'] + (5 * 60);
+					            $_SESSION['expire'] = $_SESSION['start'] + (300 * 60);
 					            header('Location: http://localhost:8000/OVS/index.php');  
 
 					    	} else { ?>
