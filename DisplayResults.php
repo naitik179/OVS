@@ -45,7 +45,7 @@ else {
                       <li><a href="index.php">Home</a></li>
                       <li><a href="Apply Candidature.php">Apply Candidature</a></li>
                       <li class="active"><a href="Results.php">Results</a></li>
-                      <li id="userid"><?= $_SESSION['userid']?></li>
+                      <a href="Logout.php"><li id="userid"><?= $_SESSION['userid']?></li></a>
                   </ul>
               </nav>
           </div>

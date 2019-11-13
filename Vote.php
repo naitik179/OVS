@@ -46,7 +46,7 @@
 					<li class="active"><a href="index.php">Home</a></li>
 					<li><a href="Apply Candidature.php">Apply Candidature</a></li>
 					<li><a href="Results.php">Results</a></li>
-					<li id="userid"><?= $_SESSION['userid']?></li>
+					<a href="Logout.php"><li id="userid"><?= $_SESSION['userid']?></li></a>
 				</ul>
 			</nav>
 		</div>
@@ -81,24 +81,57 @@ $election_id= htmlspecialchars($_GET["id"]);
   						echo "Connection error : " .mysqli_connect_error();
 					   
   							$type= settype($_SESSION['type'],'integer');
+  							$retrieving_vote= "SELECT * FROM vote";
+  							$result_vote = $conn->query($retrieving_vote);
+  							$flag=0;
+  							if ($result_vote->num_rows > 0) {
+					    	    while($row = $result_vote->fetch_assoc()) {
+					    	    	if($row['election_id']==$election_id && $row['user_id']==$_SESSION['id'])
+					    	    	{
+					    	    		$flag=1;
+					    	    	}
+					    	    }
+					    	}
+					    	    	if($flag==1)
+					    	    	{
+					    	    		?>
+					    	    		<p>Your vote has already been recorded. Thankyou!</p>
+					    	    		<?php
+					    	    	}
+					    	    	else
+					    	    	{
+					    	    	
 					    	$retrieving_data = "SELECT user.name,candidate.dob,candidate.description,candidate.user_id,candidate.id
 												FROM user ,candidate
 												WHERE user.user_id = candidate.user_id 
 												AND candidate.election_id=".$election_id;
 					    	$result = $conn->query($retrieving_data);
-
+					    	$i=1;
 					    	if ($result->num_rows > 0) {
 					    	    while($row = $result->fetch_assoc()) {
+					    	    	if($i==1){
+					    	    		?>
+					    	    		<input type="radio" name="vote_id" value="<?= $row['id'] ?>" checked> <h3><?= $row['name'] ?></h3><br>
+					    	      	<p><?= $row['description'] ?></p><hr>
+					    	    	
+					    	    	<?php
+					    	    }
+					    	    	else{
 					    	      ?>
 					    	      	<input type="radio" name="vote_id" value="<?= $row['id'] ?>"> <h3><?= $row['name'] ?></h3><br>
 					    	      	<p><?= $row['description'] ?></p><hr>									
-<?php 
-	}
-}
-?>
-<input type="submit" name="submit">
-</form>
+							<?php 
+											}
+										}
+									}
+							?>
+							<input type="submit" name="submit">
+							</form>
+							<?php
+									}
 
+
+							?>
 </div>
 </div>
 	</div>

@@ -1,5 +1,6 @@
 <?php
 $vote_id=$_POST['vote_id'];
+
 ?>
 <?php
     session_start();
@@ -48,7 +49,7 @@ $vote_id=$_POST['vote_id'];
 					<li class="active"><a href="index.php">Home</a></li>
 					<li><a href="Apply Candidature.php">Apply Candidature</a></li>
 					<li><a href="Results.php">Results</a></li>
-					<li id="userid"><?= $_SESSION['userid']?></li>
+					<a href="Logout.php"><li id="userid"><?= $_SESSION['userid']?></li></a>
 				</ul>
 			</nav>
 		</div>
@@ -79,7 +80,12 @@ $vote_id=$_POST['vote_id'];
   					$sql = "UPDATE candidate 
   							SET vote_count=vote_count + 1 
   							WHERE id=".$vote_id;
-					if ($conn->query($sql) === TRUE) {
+  					$sql2 = "SELECT id, election_id FROM candidate WHERE id=".$vote_id;
+  					$result=$conn->query($sql2);
+  					$row = $result->fetch_assoc();
+  					$election_id= $row['election_id'];
+  					$sql3= "INSERT INTO vote VALUES (".$election_id.",".$_SESSION['id'].")";
+					if ($conn->query($sql) === TRUE && $conn->query($sql3) === TRUE) {
     					echo "Your Vote has been recorded. Thankyou!";
 					}
 					else {

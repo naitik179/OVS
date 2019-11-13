@@ -44,7 +44,7 @@ else {
         						<li><a href="index.php">Home</a></li>
         						<li><a href="Apply Candidature.php">Apply Candidature</a></li>
         						<li class="active"><a href="Results.php">Results</a></li>
-        						<li id="userid"><?= $_SESSION['userid']?></li>
+        						<a href="Logout.php"><li id="userid"><?= $_SESSION['userid']?></li></a>
         					</ul>
         				</nav>
         			</div>
@@ -73,19 +73,54 @@ else {
         						if(!$conn)
         							echo "Connection error : " .mysqli_connect_error();
 
+        						$date=date("Y-m-d");
+        						$date1=(string)$date;
 
-        						$retrieving_data = "select * from election";
+        						$time=date("H:m:s");
+        						$time1=(string)$time;
+
+        						$append=$date1." ".$time1;
+        						$append1=(string)$append;
+
+
+        						$retrieving_data = "select * from election where end_date < '". $append1."'";
         						$result = $conn->query($retrieving_data);
+
+        						$hash1=array();
+        						$hash2=array();
+
+
+
+
 
         						if ($result->num_rows > 0) {
         							while($row = $result->fetch_assoc()) { ?>
 
         								<section class="4u">
-        									<span class="pennant"><span class="fa fa-briefcase"></span></span>
-        									<h3><?= $row['post']; ?></h3>
-        									<a href="DisplayResults.php?id=<?= $row['election_id']?>" class="button button-style1">View Result</a>
-        								</section>
+        									
 
+
+        									<?php 
+
+        									if(strcmp($append,$row['end_date']>0))
+        									{
+        										$product=0;
+        										?>
+        										<span class="pennant"><span class="fa fa-briefcase"></span></span>
+        										<h3><?= $row['post']; ?></h3>
+
+        										<a href="DisplayResults.php?id=<?= $row['election_id']?>" class="button button-style1">View Result</a>
+
+        										<?php
+
+        									}
+
+
+        									?>
+
+
+
+        								</section>
 
         								<?php 
         							}

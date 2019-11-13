@@ -45,7 +45,7 @@
 					<li class="active"><a href="index.php">Home</a></li>
 					<li><a href="Apply Candidature.php">Apply Candidature</a></li>
 					<li><a href="Results.php">Results</a></li>
-					<li id="userid"><?= $_SESSION['userid']?></li>
+					<a href="Logout.php"><li id="userid"><?= $_SESSION['userid']?></li></a>
 				</ul>
 			</nav>
 		</div>
@@ -81,6 +81,17 @@
  					 $conn = mysqli_connect($localhost,$username,$password,$db);
  					 if(!$conn)
   						echo "Connection error : " .mysqli_connect_error();
+
+  						$date=date("Y-m-d");
+  						$date1=(string)$date;
+
+  						$time=date("m:H:s");
+  						$time1=(string)$time;
+
+  						$append=$date1." ".$time1;
+  						$append1=(string)$append;
+
+
 					   
   							$type= settype($_SESSION['type'],'integer');
 					    	$retrieving_data = "select * from election where election_type=".$type;
@@ -88,6 +99,14 @@
 
 					    	if ($result->num_rows > 0) {
 					    	    while($row = $result->fetch_assoc()) {
+					    	    	if(strcmp($row['end_date'],$append<0))
+        									{
+        							// echo $append;
+        							// echo "<br>";
+        							// echo $row['end_date'];
+        							// echo "<br";
+
+        												
 					    	      ?>
 					    	      <section class="4u">
 									<span class="pennant"><span class="fa fa-briefcase"></span></span>
@@ -95,6 +114,7 @@
 									<a href="Vote.php?id=<?= $row['election_id']?>" class="button button-style1">Vote</a>
 								</section>
 					    	    <?php 
+					    	}
 					    			}
 					    		}
 					    		 ?>
